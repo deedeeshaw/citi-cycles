@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="">
+  <meta name="author" content="">
+
+  <title>Citi Cycle - Tables</title>
+
+  <!-- Custom fonts for this template-->
+  <link href="{{url_for('static', filename='vendor/fontawesome-free/css/all.min.css')}}" rel="stylesheet" type="text/css">
+
+  <!-- Page level plugin CSS-->
+  <link href="{{url_for('static', filename='vendor/datatables/dataTables.bootstrap4.css')}}" rel="stylesheet">
+
+  <!-- Custom styles for this template-->
+  <link href="{{url_for('static', filename='css/sb-admin.css')}}" rel="stylesheet">
+<!-- d3 js  -->
+  <script src="https://d3js.org/d3.v5.min.js"></script>
+<!-- favicon -->
+  
+  <link href="{{ url_for('static', filename='img/favicon.png') }}" rel="icon">
+
+</head>
+
+<body id="page-top">
+
+  <nav class="navbar navbar-expand navbar-dark bg-dark static-top">
+
+    <a class="navbar-brand mr-1" href="/">Citi Cycles</a>
+
+   
+
+    <!-- Navbar Search -->
+   
+    <!-- <form class="d-none d-md-inline-block form-inline ml-auto mr-0 mr-md-3 my-2 my-md-0">
+      <div class="input-group">
+       
+
+        <select id="station">
+          
+          {% for station in end_station %}
+          <option value ="{{station.endstationid}}">{{station.endstationname}}</option>
+          {% endfor %}
+        </select>
+    
+    </form> -->
+
+
+  </nav>
+
+  <div id="wrapper">
+
+     <!--################### SIDEBAR #########################-->
+     <ul class="sidebar navbar-nav">
+        <li class="nav-item active">
+          <a class="nav-link" href="/dashboard">
+            <i class="fas fa-fw fa-tachometer-alt"></i>
+            <span>Dashboard</span>
+          </a>
+        </li>
+        
+        <li class="nav-item">
+          <a class="nav-link js-scroll-trigger" href="/#chart">
+            <i class="fas fa-fw fa-chart-area"></i>
+            <span>Charts</span></a>
+        </li>
+        
+        <li class="nav-item">
+          <a class="nav-link" href="/#map">
+            <i class="fas fa-fw fa-globe-americas"></i>
+            <span>Map</span></a>
+        </li>
+        
+        <!-- <li class="nav-item">
+          <a class="nav-link" href="/tables">
+            <i class="fas fa-fw fa-table"></i>
+            <span>Table</span></a>
+        </li> -->
+      </ul>
+  
+
+    <div id="content-wrapper">
+
+      <div class="container-fluid">
+
+
+   <!-- ############## DATA TABLE ##########################  -->
+        <div class="card mb-3">
+          
+          <div class="card-header">
+            <i class="fas fa-table"></i>
+          Citi Cycle Data Table
+          </div>
+         
+          <div class="card-body">
+            <div class="table-responsive">
+              <input type="search" class="light-table-filter" data-table="order-table" placeholder="Filter">
+              <table class="table table-bordered order-table table" id="dataTable" width="100%" cellspacing="0">
+               
+                  <thead>
+                    <tr>
+                      <th>Year</th>
+                      <th>Start Station</th>
+                      <th>End Station</th>
+                      <th>User Type</th>
+                      <th>Gender</th>
+                      <th>Age</th>
+                      <th>Trip Duration (hrs)</th>
+                    </tr>
+                  </thead>
+                 
+                  <tfoot>
+                    <tr>
+                      <th>Year</th>
+                      <th>Start Station</th>
+                      <th>End Station</th>
+                      <th>User Type</th>
+                      <th>Gender</th>
+                      <th>Age</th>
+                      <th>Trip Duration (hrs)</th>
+                    </tr>
+                  </tfoot>
+                 
+                  <tbody>
+                    
+                  </tbody>
+                 
+              </table>
+            </div>
+          </div>
+          
+        </div>
+
+
+      </div>
+      <!-- /.container-fluid -->
+
+      <!-- Sticky Footer -->
+      <footer class="sticky-footer">
+        <div class="container my-auto">
+          <div class="copyright text-center my-auto">
+            <span>Copyright © Diana Dinshaw 2019</span>
+          </div>
+        </div>
+      </footer>
+
+    </div>
+    <!-- /.content-wrapper -->
+
+  </div>
+  <!-- /#wrapper -->
+
+
+  <!-- Bootstrap core JavaScript -->
+
+  <!-- API key -->
+  <script src="{{url_for('static', filename='js/config.js')}}"></script>
+
+  <!--The JS files-->
+  <script src="{{url_for('static', filename='js/tables.js')}}"></script>
+</body>
+
+</html>

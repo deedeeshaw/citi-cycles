@@ -1,0 +1,1 @@
+web:gunicorn cycle_trips.app:app
