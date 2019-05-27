@@ -1,1 +1,1 @@
-web:gunicorn cycle_trips.app:app
+web:gunicorn citi-cycles.app:app
