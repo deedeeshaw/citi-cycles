@@ -1,1 +1,1 @@
-web:gunicorn citi-cycles.app:app
+web: gunicorn citi_cycles.app:app
