@@ -33,7 +33,7 @@ def table_page():
 @app.route("/data")
 def data():
         
-        return get_all_data('./static/data/cycle_data.csv')
+        return get_all_data('citi_cycles/static/data/cycle_data.csv')
 
 ######################################################################
 # MARKS ENDING STATIONS IN MAP.JS
@@ -41,7 +41,7 @@ def data():
 @app.route("/ending_stations")
 def ending_stations():
 
-        return end_station_location('./static/data/end_stations.csv')
+        return end_station_location('citi_cycles/static/data/end_stations.csv')
 
 ######################################################################
 # MARKS STARTING STATIONS IN MAP.JS
@@ -50,7 +50,7 @@ def ending_stations():
 @app.route("/starting_stations")
 def starting_stations():
 
-        return start_station_location('./static/data/start_stations.csv')
+        return start_station_location('citi_cycles/static/data/start_stations.csv')
 
 
 if __name__=='__main__':
