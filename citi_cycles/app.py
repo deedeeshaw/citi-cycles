@@ -1,6 +1,6 @@
 # import Flask
 from flask import Flask, render_template, request, redirect, jsonify
-from data import get_all_data, end_station_location, start_station_location
+# from data import get_all_data, end_station_location, start_station_location
 
 # create app passing the __name__
 app = Flask(__name__)
